@@ -4,7 +4,7 @@ Component Name: Image Modal
 Description: Enable modal visualization on images.
 Category: Effects
 Tags: jQuery, Colorbox
-Version: 1.0.0
+Version: 1.0.1
 Author: Waboot Team <info@waboot.io>
 Author URI: http://www.waboot.io
 */
@@ -31,9 +31,10 @@ class Image_Modal extends \WBF\modules\components\Component{
 	 * Enqueue component scripts
 	 */
 	public function scripts(){
-		$cbox_elements = of_get_option($this->name.'_element');
+        $cbox_icons = \Waboot\functions\get_option($this->name.'_icons');
+        $cbox_elements = \Waboot\functions\get_option($this->name.'_element');
 		if($cbox_elements == "") $cbox_elements = false;
-		$cbox_custom_elements = of_get_option($this->name.'_custom_element');
+		$cbox_custom_elements = \Waboot\functions\get_option($this->name.'_custom_element');
 		if($cbox_custom_elements == "") $cbox_custom_elements = false;
 
 		$scripts = [
@@ -82,6 +83,19 @@ class Image_Modal extends \WBF\modules\components\Component{
 		$orgzr = \WBF\modules\options\Organizer::getInstance();
 
 		$orgzr->add_section( "colorbox", _x( "Image Modal", "Image Modal options tab label", "waboot" ));
+
+        $orgzr->add([
+            'name' => __('Icon font used', 'waboot'),
+            'id' => $this->name.'_icons',
+            'desc' => __('Select the icon font to apply colorbox', 'waboot'),
+            'type' => 'select',
+            'options' => [
+                'fontawesome5' => _x("Font Awesome 5","waboot"),
+                'fontawesome4' => _x("Font Awesome 4","waboot"),
+                'none' => _x("None","waboot"),
+            ],
+            'std' => 'fontawesome5'
+        ],"colorbox");
 
 		$orgzr->add([
 			'name' => __('Colorbox elements', 'waboot'),

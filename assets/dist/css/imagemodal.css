@@ -157,24 +157,12 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
     left: 5px;
 }
 
-#cboxPrevious:before {
-    font-size: 72px;
-    font-family: FontAwesome;
-    content: "\f104";
-}
-
 #cboxPrevious:hover {
     color: #fff;
 }
 
 #cboxNext {
     right: 5px;
-}
-
-#cboxNext:before {
-    font-size: 72px;
-    font-family: FontAwesome;
-    content: "\f105";
 }
 
 #cboxNext:hover {
@@ -192,12 +180,45 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
     outline: 0;
 }
 
-#cboxClose:before {
+#cboxClose:hover {
+    color: #fff;
+}
+
+.colorbox-icons-fontawesome4 #cboxPrevious:before {
+    font-size: 72px;
+    font-family: FontAwesome;
+    content: "\f104";
+}
+
+.colorbox-icons-fontawesome4 #cboxNext:before {
+    font-size: 72px;
+    font-family: FontAwesome;
+    content: "\f105";
+}
+
+.colorbox-icons-fontawesome4 #cboxClose:before {
     font-family: FontAwesome;
     font-size: 28px;
     content: "\f057";
 }
 
-#cboxClose:hover {
-    color: #fff;
+.colorbox-icons-fontawesome5 #cboxPrevious:before {
+    font-size: 2em;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 700;
+    content: "\f104";
+}
+
+.colorbox-icons-fontawesome5 #cboxNext:before {
+    font-size: 2em;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 700;
+    content: "\f105";
+}
+
+.colorbox-icons-fontawesome5 #cboxClose:before {
+    font-size: 2em;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 700;
+    content: "\f057";
 }

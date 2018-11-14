@@ -58,4 +58,21 @@ jQuery(document).ready(function($){
         cboxProps.rel = "cboximg";
         $(""+elements+"").colorbox(cboxProps);
     }
+    if(typeof wabootCbox.icons !== 'undefined'){
+        switch(wabootCbox.icons){
+            case "none":
+                //Do nothing :)
+                break;
+            case "fontawesome4":
+                $('a').colorbox({onOpen: function(){
+                        $('#colorbox').addClass('colorbox-icons-fontawesome4');
+                    }});
+                break;
+            case "fontawesome5":
+                $('a').colorbox({onOpen: function(){
+                        $('#colorbox').addClass('colorbox-icons-fontawesome5');
+                    }});
+                break;
+        }
+    }
 });
