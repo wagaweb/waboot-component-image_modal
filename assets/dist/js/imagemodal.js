@@ -64,12 +64,12 @@ jQuery(document).ready(function($){
                 //Do nothing :)
                 break;
             case "fontawesome4":
-                $('a').colorbox({onOpen: function(){
+                $('a.cboxElement').colorbox({onOpen: function(){
                         $('#colorbox').addClass('colorbox-icons-fontawesome4');
                     }});
                 break;
             case "fontawesome5":
-                $('a').colorbox({onOpen: function(){
+                $('a.cboxElement').colorbox({onOpen: function(){
                         $('#colorbox').addClass('colorbox-icons-fontawesome5');
                     }});
                 break;
