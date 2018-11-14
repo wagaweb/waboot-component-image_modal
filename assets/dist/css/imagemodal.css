@@ -184,6 +184,21 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
     color: #fff;
 }
 
+#cboxPrevious:before {
+    font-size: 2em;
+    content: "<";
+}
+
+#cboxNext:before {
+    font-size: 2em;
+    content: ">";
+}
+
+#cboxClose:before {
+    font-size: 2em;
+    content: "x";
+}
+
 .colorbox-icons-fontawesome4 #cboxPrevious:before {
     font-size: 72px;
     font-family: FontAwesome;

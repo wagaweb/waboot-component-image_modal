@@ -55,6 +55,7 @@ class Image_Modal extends \WBF\modules\components\Component{
 				'i10n' => [
 					'name' => 'wabootCbox',
 					'params' => [
+                        'icons' => $cbox_icons,
 						'elements' => $cbox_elements,
 						'custom_elements' => isset($cbox_custom_elements) ? $cbox_custom_elements : false,
 						'current' => __("image {current} of {total}","waboot")
