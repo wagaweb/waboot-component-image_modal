@@ -116,6 +116,7 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
     right: 0px;
     color: #ccc;
 }
+
 /*#cboxLoadingGraphic {
       background: url(images/loading.gif) no-repeat center center;
   }
@@ -184,19 +185,22 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
     color: #fff;
 }
 
-#cboxPrevious:before {
-    font-size: 2em;
-    content: "<";
+#cboxClose svg {
+    width: 15px;
+    fill: #fff;
 }
 
-#cboxNext:before {
-    font-size: 2em;
-    content: ">";
+#cboxNext svg, #cboxPrevious svg {
+    fill: #000;
+    height: 50px;
 }
 
-#cboxClose:before {
-    font-size: 2em;
-    content: "x";
+#cboxClose:hover svg {
+    fill: red;
+}
+
+#cboxNext:hover svg, #cboxPrevious:hover svg {
+    fill: red;
 }
 
 .colorbox-icons-fontawesome4 #cboxPrevious:before {
