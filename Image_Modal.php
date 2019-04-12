@@ -4,7 +4,7 @@ Component Name: Image Modal
 Description: Enable modal visualization on images.
 Category: Effects
 Tags: jQuery, Colorbox
-Version: 1.0.1
+Version: 1.0.2
 Author: Waboot Team <info@waboot.io>
 Author URI: http://www.waboot.io
 */
